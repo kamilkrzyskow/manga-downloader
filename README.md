@@ -6,6 +6,7 @@ Python scrtipt made to download mangas in bulk from MangaLife.us
     <li>Whole project
         <ul>
             <li>Deleting code duplicates and redundant code</li>
+            <li>Favorites on an ftp</li>
         </ul>
     </li>
     <li>FavChk.py
