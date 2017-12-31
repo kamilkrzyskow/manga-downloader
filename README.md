@@ -1,6 +1,6 @@
 # manga-downloader [termux-build]
 To make it to work with termux create a *scripts* folder on your sdcard. //scripts can be anything <br>
-Termux command I use to setup everything:<br>
+Termux commands I use to setup everything:<br>
 -pkg install python2<br>
 -pip2 install beautifulsoup4<br>
 -termux-setup-storage<br>
@@ -13,6 +13,9 @@ Python scrtipt made to download mangas in bulk from MangaLife.us
 <br>Development End Date: December 17th 2017 2PM
 <br>Amount of lines of code: ~450±70
 <br>Hours worked: 15-40
+<br><br>-----------------------<br>
+Favorites are being saved in the same place where the scripts are.
+<br>---------------------------
 <br><br>Unfinished stuff:
 <ul>
     <li>Whole project
@@ -33,3 +36,4 @@ Python scrtipt made to download mangas in bulk from MangaLife.us
     </li>
     <li>And a lot more, but I'm happy with the current end results</li>
 </ul>
+<span style="color:red;">I'm planning to redo this project in Python3 with FTP support, because it turned out that copying my favorites file between my phone and pc is harder than I have anticipated</span>
