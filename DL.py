@@ -172,7 +172,5 @@ if os.path.exists(f):
             with open(f, "w") as fp:
                 json.dump(favs, fp, sort_keys=True, indent=4)
 
-ctypes.windll.user32.FlashWindow(ctypes.windll.kernel32.GetConsoleWindow(), True )
-
 raw_input("\nDownload complete. Press [ENTER] to exit...")
 sys.exit(0)
