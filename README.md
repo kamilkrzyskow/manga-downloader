@@ -1,6 +1,6 @@
 # manga-downloader
 Python scrtipt made to download mangas in bulk from MangaLife.us
-<br>Made with Python 2.7.13
+<br>Made with Python 2.7.13 + <a href="https://www.crummy.com/software/BeautifulSoup/">BeautifulSoup4</a>
 <br><br>Development Start Date: November 11th 2017 8PM
 <br>Development End Date: December 17th 2017 2PM
 <br>Amount of lines of code: ~450±70
