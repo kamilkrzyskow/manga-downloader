@@ -84,7 +84,7 @@ def update(titles, favs):
                     amount = nLastCh - lastRd + 1
                 else:
                     amount = choice
-                os.system("DL.py "+url+" "+str(lastRd)+" "+str(amount))
+                os.system("python2 DL.py "+url+" "+str(lastRd)+" "+str(amount))
                 favs[t][1][1] = lastRd + amount - 1
             elif choice.lower()=='n':
                 choice = raw_input("Set newest chapter ("+str(nLastCh)+") as last read instead of ("+str(lastRd)+") [y/n]: ")
@@ -169,7 +169,7 @@ def manage(titles, favs, mem = 0):
             amount = manga[1][2] - manga[1][1] + 1
         else:
             amount = choice
-        os.system("DL.py "+str(manga[1][0])+" "+str(manga[1][1])+" "+str(amount))
+        os.system("python2 DL.py "+str(manga[1][0])+" "+str(manga[1][1])+" "+str(amount))
     elif (choice == 5):
         os.system('cls' if os.name == 'nt' else 'clear')
         start()
