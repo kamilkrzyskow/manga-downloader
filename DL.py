@@ -140,7 +140,7 @@ while currCh < (startCh+ileCh):
         else:
             nrChap += "0"
         
-        path = "Manga/"+tytul+"/chapter_"+nrChap+"_page"+nrStrony+".png"
+        path = dirPath+"/chapter_"+nrChap+"_page"+nrStrony+".png"
 
         if not os.path.exists(path):
             urllib.urlretrieve(str(item), path)
