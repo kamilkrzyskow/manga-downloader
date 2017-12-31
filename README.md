@@ -29,6 +29,4 @@ Favorites are being saved in the same place where the scripts are.
     <li>And a lot more, but I'm happy with the current end results</li>
 </ul>
 <br>
-```diff
-- I'm planning to redo this project in Python3 with FTP support, because it turned out that copying my favorites file between my phone and pc is harder than I have anticipated
-```
+I'm planning to redo this project in Python3 with FTP support, because it turned out that copying my favorites file between my phone and pc is harder than I have anticipated
