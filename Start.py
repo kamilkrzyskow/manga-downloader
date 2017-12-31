@@ -16,7 +16,7 @@ def start():
     
     if kw.lower()=='fav':
         os.system('cls' if os.name == 'nt' else 'clear')
-        os.system("FavChk.py")
+        os.system("python2 FavChk.py")
         sys.exit(0)
 
     kw = list(kw)
@@ -175,7 +175,7 @@ def downMangs(u, t, kw, page, desc):
         choice = raw_input("\nProceed to the download? [y/n]: ")
 
         if choice.lower()=='y':
-            os.system("DL.py "+urlw)
+            os.system("python2 DL.py "+urlw)
 
         sys.exit(0)
 
