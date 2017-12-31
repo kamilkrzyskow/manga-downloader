@@ -60,8 +60,10 @@ else:
 
 currCh = startCh
 
-if not os.path.exists("Manga/"+tytul):
-    os.makedirs("Manga/"+tytul)
+dirPath = "../Manga/"+tytul
+
+if not os.path.exists(dirPath):
+    os.makedirs(dirPath)
 
 er_count = 0    
 
