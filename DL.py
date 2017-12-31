@@ -63,6 +63,8 @@ currCh = startCh
 if not os.path.exists("Manga/"+tytul):
     os.makedirs("Manga/"+tytul)
 
+er_count = 0    
+
 #-----------------------------------------------#
 
 while currCh < (startCh+ileCh):
@@ -71,7 +73,7 @@ while currCh < (startCh+ileCh):
     else:
         url2 = url1+str(currCh)+"."+str(partCh)+".html"
 #	print "\n"+url2
-    headers = {'User-Agent' : "Magic Browser"}
+    headers = {'User-Agent' : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0"}
     req = urllib2.Request(url2, "", headers)
     try:
         resp = urllib2.urlopen(req)
@@ -87,8 +89,14 @@ while currCh < (startCh+ileCh):
         elif err.code == 403:
             print "\n403 - Access denied ;_;"
             break
+        elif err.code == 500:
+            print "\n500 - Something went wrong...on the "+str(er_count+1)+"try"
+            if er_count < 50:
+                continue
+            else: 
+                break
         else:
-            print "\nWeird error...: ", err.code
+            print "\n"+url2+"\nWeird error...: ", err.code
             break
     except urllib2.URLError, err:
         print "\nURL error ;_;: ", err.reason
@@ -128,7 +136,7 @@ while currCh < (startCh+ileCh):
         if partCh!=0:
             nrChap += str(partCh)
         else:
-            nrChap += "_"
+            nrChap += "0"
         
         path = "Manga/"+tytul+"/chapter_"+nrChap+"_page"+nrStrony+".png"
 
@@ -143,6 +151,7 @@ while currCh < (startCh+ileCh):
     if partCh<9:
         partCh += 1
     else:
+        er_count = 0
         currCh += 1
         partCh = 0	
 
